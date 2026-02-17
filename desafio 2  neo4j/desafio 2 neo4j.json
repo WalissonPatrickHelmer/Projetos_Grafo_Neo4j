@@ -1,0 +1,161 @@
+{
+  "style": {
+    "font-family": "Fira Code",
+    "background-color": "#2B2B2B",
+    "background-image": "",
+    "background-size": "100%",
+    "node-color": "#2B2B2B",
+    "border-width": 2,
+    "border-color": "#A6B7C8",
+    "radius": 90,
+    "node-padding": 5,
+    "node-margin": 2,
+    "outside-position": "auto",
+    "node-icon-image": "",
+    "node-background-image": "",
+    "icon-position": "inside",
+    "icon-size": 64,
+    "caption-position": "inside",
+    "caption-max-width": 200,
+    "caption-color": "#A6B7C8",
+    "caption-font-size": 18,
+    "caption-font-weight": "normal",
+    "label-position": "inside",
+    "label-display": "bare",
+    "label-color": "#A6B7C8",
+    "label-background-color": "#ffffff",
+    "label-border-color": "#000000",
+    "label-border-width": 4,
+    "label-font-size": 18,
+    "label-padding": 5,
+    "label-margin": 4,
+    "directionality": "directed",
+    "detail-position": "inline",
+    "detail-orientation": "parallel",
+    "arrow-width": 2,
+    "arrow-color": "#A6B7C8",
+    "margin-start": 0,
+    "margin-end": 0,
+    "margin-peer": 20,
+    "attachment-start": "normal",
+    "attachment-end": "normal",
+    "relationship-icon-image": "",
+    "type-color": "#A6B7C8",
+    "type-background-color": "#2B2B2B",
+    "type-border-color": "#000000",
+    "type-border-width": 0,
+    "type-font-size": 18,
+    "type-padding": 5,
+    "property-position": "inside",
+    "property-alignment": "colon",
+    "property-color": "#A6B7C8",
+    "property-font-size": 18,
+    "property-font-weight": "normal"
+  },
+  "nodes": [
+    {
+      "id": "n2",
+      "position": {
+        "x": 2250.5821261207852,
+        "y": 3566.149593056223
+      },
+      "caption": "",
+      "labels": [
+        "Musica"
+      ],
+      "properties": {
+        "id: integer": "",
+        "titulo: string": "",
+        "duracao: integer": "",
+        "ano: integer": ""
+      },
+      "style": {}
+    },
+    {
+      "id": "n3",
+      "position": {
+        "x": 2972.197148603051,
+        "y": 3483.8174296129455
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "Usuario"
+      ],
+      "properties": {
+        "id: integer": "",
+        "nome: string": "",
+        "idade: integer": ""
+      }
+    },
+    {
+      "id": "n4",
+      "position": {
+        "x": 2416.1161933735407,
+        "y": 4171.255263460626
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "Artista"
+      ],
+      "properties": {
+        "id: integer": "",
+        "nome: string": "",
+        "pais: string": ""
+      }
+    },
+    {
+      "id": "n6",
+      "position": {
+        "x": 2972.197148603051,
+        "y": 3941.8174296129455
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "Genero\r"
+      ],
+      "properties": {
+        "nome: string": ""
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "id": "n0",
+      "type": "OUVE",
+      "style": {},
+      "properties": {
+        "plays: integer": "",
+        "dataUltimaExecucao: datetime": ""
+      },
+      "fromId": "n3",
+      "toId": "n2"
+    },
+    {
+      "id": "n1",
+      "type": "DO_ARTISTA",
+      "style": {},
+      "properties": {},
+      "fromId": "n2",
+      "toId": "n4"
+    },
+    {
+      "id": "n2",
+      "type": "TEM_GENERO",
+      "style": {},
+      "properties": {},
+      "fromId": "n2",
+      "toId": "n6"
+    },
+    {
+      "id": "n3",
+      "type": "SEGUE",
+      "style": {},
+      "properties": {},
+      "fromId": "n3",
+      "toId": "n4"
+    }
+  ]
+}

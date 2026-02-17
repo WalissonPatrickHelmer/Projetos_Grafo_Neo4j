@@ -1,0 +1,4 @@
+MATCH path0 = (n3:Usuario {`id: integer`: "", `nome: string`: "", `idade: integer`: ""})-[:OUVE {`plays: integer`: "", `dataUltimaExecucao: datetime`: ""}]->(n2:Musica {`id: integer`: "", `titulo: string`: "", `duracao: integer`: "", `ano: integer`: ""})-[:DO_ARTISTA]->(:Artista {`id: integer`: "", `nome: string`: "", `pais: string`: ""})<-[:SEGUE]-(n3),
+path1 = (n2)-[:TEM_GENERO]->(:`Genero
+` {`nome: string`: ""})
+RETURN path0, path1
